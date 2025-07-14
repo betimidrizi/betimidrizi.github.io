@@ -114,8 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
 function initializeTheme() {
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -139,7 +137,6 @@ function initializeTheme() {
     localStorage.setItem('theme', initialTheme);
   }
 }
-
 
 function toggleTheme() {
   const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -278,8 +275,6 @@ function initParticles() {
         retina_detect: true
     });
 }
-
-
 
 function loadSkills() {
     const skillsGrid = document.querySelector('.skills-grid');
