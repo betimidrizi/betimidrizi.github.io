@@ -319,20 +319,20 @@ function loadProjects() {
 
     const projects = [
         {
-            title: 'E-Commerce Platform',
-            description: 'A full-featured online store with product management, cart functionality, and payment integration built with Laravel.',
-            technologies: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
-            image: 'assets/images/projects/ecommerce.jpg',
-            liveUrl: '#',
-            codeUrl: '#'
+            title: 'Bosch Junior Auto Service',
+            description: 'Professional automotive service website showcasing our workshop, team, and services with gallery, service information, and contact functionality.',
+            technologies: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Font Awesome'],
+            image: 'assets/images/projects/bosch-showcase.jpg',
+            liveUrl: 'https://boschjunior.unaux.com/?i=1',
+            codeUrl: 'https://github.com/betimidrizi/BoschJunior'
         },
         {
-            title: 'Task Management App',
-            description: 'Web application for managing tasks with drag-and-drop interface and team collaboration features built with .NET.',
-            technologies: ['.NET', 'C#', 'SQL Server', 'JavaScript'],
-            image: 'assets/images/projects/taskmanager.jpg',
+            title: 'Book Review Platform',
+            description: 'A user-friendly web platform where readers can browse, review, like, and dislike books with secure authentication and admin management, built with ASP.NET Core MVC.',
+            technologies: ['ASP.NET Core', 'C#', 'Entity Framework Core', 'SQL Server', 'Bootstrap', 'JavaScript'],
+            image: 'assets/images/projects/book-review.png',
             liveUrl: '#',
-            codeUrl: '#'
+            codeUrl: 'https://github.com/betimidrizi/BookReviewPlatform'
         },
         {
             title: 'Portfolio Website',
