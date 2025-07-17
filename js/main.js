@@ -139,31 +139,33 @@ function initializeTheme() {
 }
 
 function toggleTheme() {
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-  document.documentElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
 
-  const themeToggle = document.querySelector('.theme-toggle');
-  if (newTheme === 'dark') {
-    themeToggle.querySelector('.fa-moon').style.display = 'none';
-    themeToggle.querySelector('.fa-sun').style.display = 'block';
-  } else {
-    themeToggle.querySelector('.fa-moon').style.display = 'block';
-    themeToggle.querySelector('.fa-sun').style.display = 'none';
-  }
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (newTheme === 'dark') {
+        themeToggle.querySelector('.fa-moon').style.display = 'none';
+        themeToggle.querySelector('.fa-sun').style.display = 'block';
+    } else {
+        themeToggle.querySelector('.fa-moon').style.display = 'block';
+        themeToggle.querySelector('.fa-sun').style.display = 'none';
+    }
 
-  // ❌ Kill existing particles instance
-  if (window.pJSDom && pJSDom.length) {
-    pJSDom[0].pJS.fn.vendors.destroypJS(); // Good practice
-    pJSDom = [];
-    document.querySelector('#particles-js').innerHTML = ''; // Clear canvas
-  }
+    // Update project images without reloading the entire projects
+    document.querySelectorAll('.project-image img').forEach(img => {
+        img.src = newTheme === 'dark' ? img.dataset.darkSrc : img.dataset.lightSrc;
+    });
 
-  // ✅ Re-initialize with new primary color
-  initParticles();
-  
+    // Handle particles
+    if (window.pJSDom && pJSDom.length) {
+        pJSDom[0].pJS.fn.vendors.destroypJS();
+        pJSDom = [];
+        document.querySelector('#particles-js').innerHTML = '';
+    }
+    initParticles();
 }
 
 function initParticles() {
@@ -317,12 +319,16 @@ function loadProjects() {
     const projectsGrid = document.querySelector('.projects-grid');
     if (!projectsGrid) return;
 
+        // Get current theme
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    
     const projects = [
         {
             title: 'Bosch Junior Auto Service',
             description: 'Professional automotive service website showcasing our workshop, team, and services with gallery, service information, and contact functionality.',
             technologies: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Font Awesome'],
             image: 'assets/images/projects/bosch-showcase.jpg',
+            darkImage: 'assets/images/projects/bosch-showcase-dark.jpg', // Add dark mode image
             liveUrl: 'https://boschjunior.unaux.com/?i=1',
             codeUrl: 'https://github.com/betimidrizi/BoschJunior'
         },
@@ -368,13 +374,16 @@ function loadProjects() {
         }
     ];
 
-    projectsGrid.innerHTML = '';
+projectsGrid.innerHTML = '';
     projects.forEach(project => {
         const projectCard = document.createElement('div');
         projectCard.className = 'project-card';
         projectCard.innerHTML = `
             <div class="project-image">
-                <img src="${project.image}" alt="${project.title}">
+                <img src="${currentTheme === 'dark' && project.darkImage ? project.darkImage : project.image}" 
+                     alt="${project.title}"
+                     data-light-src="${project.image}"
+                     data-dark-src="${project.darkImage || project.image}">
             </div>
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
