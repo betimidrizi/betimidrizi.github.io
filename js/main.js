@@ -319,7 +319,7 @@ function loadProjects() {
     const projectsGrid = document.querySelector('.projects-grid');
     if (!projectsGrid) return;
 
-        // Get current theme
+    // Get current theme
     const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
     
     const projects = [
@@ -328,7 +328,7 @@ function loadProjects() {
             description: 'Professional automotive service website showcasing our workshop, team, and services with gallery, service information, and contact functionality.',
             technologies: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Font Awesome'],
             image: 'assets/images/projects/bosch-showcase.jpg',
-            darkImage: 'assets/images/projects/bosch-showcase-dark.jpg', // Add dark mode image
+            darkImage: 'assets/images/projects/bosch-showcase-dark.jpg',
             liveUrl: 'https://boschjunior.unaux.com/?i=1',
             codeUrl: 'https://github.com/betimidrizi/BoschJunior'
         },
