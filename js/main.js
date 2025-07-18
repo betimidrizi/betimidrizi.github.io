@@ -349,12 +349,12 @@ function loadProjects() {
             codeUrl: 'https://github.com/betimidrizi/CarRentalSystem'
         },
         {
-            title: 'Weather Dashboard',
-            description: 'Real-time weather information dashboard with 5-day forecast using Python and API integration.',
-            technologies: ['Python', 'JavaScript', 'API Integration'],
-            image: 'assets/images/projects/weather.jpg',
+            title: 'Movie Recommendation Platform',
+            description: 'A sleek and intuitive web application where users can browse movies, read and write reviews with ratings, and get personalized movie recommendations. Includes secure user authentication and admin management tools, built with Flask, Python, and Bootstrap.',
+            technologies: ['Flask', 'Python', 'Jinja2', 'SQLite/MongoDB', 'Bootstrap', 'JavaScript'],
+            image: 'assets/images/projects/movie-recommendation.png',
             liveUrl: '#',
-            codeUrl: '#'
+            codeUrl: 'https://github.com/betimidrizi/MovieRecommendationPlatform'
         },
         {
             title: 'Inventory System',
