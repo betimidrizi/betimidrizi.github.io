@@ -341,12 +341,12 @@ function loadProjects() {
             codeUrl: 'https://github.com/betimidrizi/BookReviewPlatform'
         },
         {
-            title: 'Portfolio Website',
-            description: 'Responsive personal portfolio website showcasing skills and projects built with modern frontend technologies.',
-            technologies: ['HTML', 'CSS', 'JavaScript'],
-            image: 'assets/images/projects/portfolio.jpg',
+            title: 'Distributed Car Rental System',
+            description: 'A full-featured distributed web application for booking cars with real-time booking, user and admin roles, secure shared authentication, booking management, and reporting. Built with ASP.NET Core MVC, Web API, and Entity Framework Core.',
+            technologies: ['ASP.NET Core MVC', 'ASP.NET Core Web API', 'C#', 'Entity Framework Core', 'SQL Server', 'Bootstrap', 'Identity', 'JavaScript'],
+            image: 'assets/images/projects/car-rental-system.png',
             liveUrl: '#',
-            codeUrl: '#'
+            codeUrl: 'https://github.com/betimidrizi/CarRentalSystem'
         },
         {
             title: 'Weather Dashboard',
