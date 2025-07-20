@@ -355,22 +355,6 @@ function loadProjects() {
             image: 'assets/images/projects/movie-recommendation.png',
             liveUrl: '#',
             codeUrl: 'https://github.com/betimidrizi/MovieRecommendationPlatform'
-        },
-        {
-            title: 'Inventory System',
-            description: 'Desktop application for inventory management with reporting features built with C++ and Qt.',
-            technologies: ['C++', 'Qt Framework'],
-            image: 'assets/images/projects/inventory.jpg',
-            liveUrl: '#',
-            codeUrl: '#'
-        },
-        {
-            title: 'Social Media Analytics',
-            description: 'Tool for analyzing social media metrics and generating reports built with .NET Framework.',
-            technologies: ['.NET Framework', 'C#', 'SQL Server'],
-            image: 'assets/images/projects/social.jpg',
-            liveUrl: '#',
-            codeUrl: '#'
         }
     ];
 
