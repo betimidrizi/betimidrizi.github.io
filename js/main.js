@@ -329,7 +329,7 @@ function loadProjects() {
             technologies: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Font Awesome'],
             image: 'assets/images/projects/bosch-showcase.jpg',
             darkImage: 'assets/images/projects/bosch-showcase-dark.jpg',
-            liveUrl: 'https://boschjunior.unaux.com/?i=1',
+            liveUrl: '#',
             codeUrl: 'https://github.com/betimidrizi/BoschJunior'
         },
         {
